@@ -1,0 +1,53 @@
+.ol-page { max-width: 800px; margin: 0 auto; padding: 58px 24px 64px; color: #222c28; font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+.ol-page *, .ol, .ol * { box-sizing: border-box; }
+.ol-page .ol-eyebrow { margin: 0 0 12px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #49745f; }
+.ol-page h1 { max-width: none; margin: 0; font-size: clamp(28px, 5vw, 40px); line-height: 1.2; letter-spacing: -.035em; color: #222c28; }
+.ol-page .ol-intro { margin: 12px 0 30px; color: #65716b; font-size: 15px; line-height: 1.6; }
+.ol { display: block; padding: 24px 30px; border: 1px solid #dde3dc; border-radius: 20px; background: #fff; color: #222c28; font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+.ol .ol-hint { margin: 0 0 8px; text-align: center; color: #737d76; font-size: 12px; line-height: 1.6; }
+.ol .ol-circuit { --wire-inset: clamp(52px, 12%, 84px); position: relative; height: 360px; }
+.ol .ol-wire { position: absolute; inset: 110px var(--wire-inset) 100px; border: 2px solid #b7c6ba; border-radius: 14px; }
+.ol .ol-control { position: absolute; left: 50%; display: flex; flex-direction: column; gap: 7px; width: 120px; transform: translateX(-50%); text-align: center; color: #65716b; font-size: 12px; font-weight: 500; }
+.ol .ol-voltage { top: 4px; }
+.ol .ol-resistance { bottom: 0; }
+.ol .ol-input-wrap { position: relative; display: block; }
+.ol .ol-control input { display: block; width: 100%; height: 44px; padding: 10px 30px 10px 12px; border: 1px solid #d7e0d5; border-radius: 8px; background: #f7f9f4; color: #285b43; font: inherit; font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; outline: none; }
+.ol .ol-control input:focus-visible { outline: 3px solid #78a58d; outline-offset: 2px; }
+.ol .ol-control input[aria-invalid='true'] { border-color: #bd6446; }
+.ol .ol-input-wrap > span { position: absolute; right: 11px; top: 50%; transform: translateY(-50%); color: #748177; pointer-events: none; font-size: 14px; }
+.ol .ol-control input::-webkit-inner-spin-button { -webkit-appearance: none; }
+.ol .ol-control input { -moz-appearance: textfield; }
+.ol .ol-battery { position: absolute; top: 91px; left: 50%; display: flex; justify-content: space-between; align-items: center; width: 96px; height: 38px; padding: 0 12px; transform: translateX(-50%); border: 1px solid #a7bba9; border-radius: 7px; background: linear-gradient(180deg, #e9efe4, #f8fbf4 35%, #dce7d6); color: #49745f; font-size: 19px; box-shadow: 0 5px 10px #293b270a; }
+.ol .ol-battery::before { content: ''; position: absolute; left: -6px; top: 11px; width: 5px; height: 14px; border: 1px solid #a7bba9; border-radius: 2px 0 0 2px; background: #dce7d6; }
+.ol .ol-direction { position: absolute; left: var(--wire-inset); top: calc(50% + 5px); padding: 2px 3px; transform: translate(-50%, -50%); background: #fff; color: #7f9984; font-size: 19px; line-height: 1; }
+.ol .ol-ammeter { position: absolute; right: calc(var(--wire-inset) - 44px); top: calc(50% + 5px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; width: 88px; height: 88px; transform: translateY(-50%); border: 2px solid #8fac96; border-radius: 50%; background: #fff; box-shadow: 0 5px 16px #285b4308; }
+.ol .ol-meter-label { color: #748177; font-size: 10px; }
+.ol .ol-current { display: block; max-width: 80px; font-size: 22px; font-weight: 700; color: #285b43; font-variant-numeric: tabular-nums; text-align: center; white-space: nowrap; line-height: 1.15; }
+.ol .ol-meter-symbol { color: #91a393; font-size: 10px; }
+.ol .ol-resistor { position: absolute; left: 50%; bottom: 82px; display: grid; place-items: center; width: 100px; height: 36px; transform: translateX(-50%); border: 1px solid #c7b68d; border-radius: 12px; background: linear-gradient(#e3d2ae, #f1e5ce 30%, #d9c6a1); color: #87754e; font-size: 14px; font-weight: 600; box-shadow: 0 5px 10px #77603e0a; }
+.ol .ol-resistor::before, .ol .ol-resistor::after { content: ''; position: absolute; top: 0; bottom: 0; width: 4px; background: #b9a780; }
+.ol .ol-resistor::before { left: 14px; }
+.ol .ol-resistor::after { right: 14px; }
+.ol .ol-results { margin-top: 25px; }
+.ol .ol-power { display: flex; flex-direction: column; align-items: center; gap: 9px; padding-bottom: 25px; }
+.ol .ol-power > span { font-size: 11px; color: #748177; text-transform: uppercase; letter-spacing: .14em; }
+.ol .ol-power output { max-width: 100%; font-size: clamp(32px, 6vw, 44px); line-height: 1.2; font-weight: 700; color: #285b43; font-variant-numeric: tabular-nums; letter-spacing: -.04em; overflow-wrap: anywhere; }
+.ol .ol-power small { color: #8a948c; font-size: 11px; }
+.ol .ol-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; }
+.ol .ol-summary > div { display: block; padding: 16px 14px; border: 1px solid #e9ece4; border-radius: 10px; background: #f6f7f3; }
+.ol .ol-summary dt { color: #6d786e; font-size: 11px; }
+.ol .ol-summary dd { margin: 10px 0 0; color: #28382e; font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.ol .ol-note { margin: 20px 0 0; color: #7b857d; font-size: 11px; line-height: 1.6; text-align: center; }
+.ol .ol-error { margin: 20px 0 0; color: #9a5038; font-size: 12px; text-align: center; line-height: 1.6; }
+.ol [hidden] { display: none; }
+.ol-page .ol-footnote { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; margin: 20px 0 0; color: #778277; font-size: 11px; line-height: 1.6; }
+.ol-page .ol-footnote a { color: #49745f; text-decoration: underline; text-underline-offset: 3px; }
+.ol-standalone { margin: 0; background: #f6f6f2; }
+.ol-page noscript { display: block; margin: 16px 0; color: #865136; }
+@media (max-width: 540px) {
+  .ol-page { padding: 32px 16px 40px; }
+  .ol-page .ol-intro { margin-bottom: 22px; font-size: 14px; }
+  .ol { padding: 24px 16px 20px; border-radius: 16px; }
+  .ol .ol-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ol .ol-summary > div { padding: 14px; }
+}
