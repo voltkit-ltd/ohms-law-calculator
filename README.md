@@ -24,6 +24,8 @@ Open http://localhost:8080. JavaScript ES modules need HTTP; opening `index.html
 
 The numeric inputs provide suggested common values and also accept custom values. Native datalist presentation depends on the browser; custom entry always works. Multiple calculator instances can share a page.
 
+Click an input, then scroll over it to change its value: up increases by 1, down decreases by 1. Hold Shift for 0.1 steps. The circuit updates immediately. Voltage stops at zero, and wheel adjustment never reduces a positive resistance to zero or below. Scrolling elsewhere or over an unfocused input scrolls the page normally; Ctrl/Cmd wheel gestures are left to the browser.
+
 ## Calculation only
 
 ```js

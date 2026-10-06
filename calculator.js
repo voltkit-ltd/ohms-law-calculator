@@ -63,6 +63,18 @@ class OhmsLawCalculator extends HTMLElement {
       }
     };
     this.addEventListener('input', update);
+    for (const input of [voltage, resistance]) {
+      input.addEventListener('wheel', (event) => {
+        if (document.activeElement !== input || event.ctrlKey || event.metaKey || !event.deltaY) return;
+        event.preventDefault();
+        const value = Number.isFinite(input.valueAsNumber) ? input.valueAsNumber : 0;
+        const step = event.shiftKey ? 0.1 : 1;
+        const next = Number((value - Math.sign(event.deltaY) * step).toFixed(12));
+        if (input === resistance && next <= 0) return;
+        input.value = String(Math.max(0, next));
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      }, { passive: false });
+    }
     update();
   }
 }
